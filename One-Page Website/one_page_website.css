@@ -1,0 +1,40 @@
+.photo-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.photo{
+	display: inline-block;
+	content: center;
+	text-align: center;
+}
+
+p, h1, h2, h3{
+	text-align: center;
+	font-family: helvetica;
+	color: white;
+	text-shadow: 4px 4px 4px black;
+}
+
+form{
+	text-align: center;
+}
+
+
+li{
+	display: inline-block;
+	list-style-type: none;
+	margin: 0;
+	padding: 4px;
+	font-family: helvetica;
+	color: white;
+	
+}
+
+img{
+	padding: 4px;
+	width: 300px;
+	height: auto;
+	vertical-align: middle;  
+}
