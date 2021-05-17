@@ -1,6 +1,7 @@
 /*===================================
 TEXT SECTION
 ===================================*/
+
 html {
     font-family: sans-serif;
     -webkit-tap-highlight-color: rgb(0,0,0);
@@ -19,6 +20,7 @@ h1 {
     font-weight: 900;
     font-size: 50px;
     font-variant: small-caps;
+    font-family: Audiowide;
 }
 
 h2 {
@@ -39,7 +41,9 @@ form{
 	text-align: center;
 }
 
-
+.head-main {
+    font-style: italic;
+}
 
 
 
