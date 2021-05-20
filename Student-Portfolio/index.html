@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="stylesheet/portfolio-css.css">
+        <title>Lemiere Portfolio</title>
+    </head>
+
+    <!--Body-->
+    <body>
+
+        <!--NavBar-->
+        <div class="NavBar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#Contact">Contact</a>
+        </div>
+
+        <br>
+        <br>
+
+        <!-- Background Video -->
+        <div id="Home">
+            <video autoplay muted loop id="bg_video">
+               <source src="images/video/blue-wave.mp4" type="video/mp4">
+               Your browser may be out of date and cannot display video.
+            </video>
+        </div>
+
+        <!-- Video Text Overlay -->
+        <div class="Video_Text">
+            <h1 class="white-text">Welcome!</h1>
+            <strong>
+                <p class="center">
+                    My name is Eric Lemiere, and this is my portfolio website.
+                    <br>Have a look around!
+                    <br>
+                    <br>
+                    <q>I’m not superstitious but I am a little stitious.</q>
+                    <br>-Michael Scott
+                </p>
+            </strong>
+        </div>
+
+        <!--About section-->
+        <div class="Row" id="About">
+            <!--Left column-->
+            <div class="Column_2">
+                <img src="images/family.jpg" alt="Family Pic">
+            </div>
+            <!--Right column-->
+            <div class="Column_1">
+                <h1>About</h1>
+                <p>
+                    Who am I? A musician who likes to code. Married to Amber since 2007, and father to Helo since 2020. Animal enthusiast. 
+                    <br>
+                    <br>I will soon finish the Software Developer Boot Camp from <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a> and will have experience in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. 
+                    <br>
+                    <br>Once I am a full-stack developer I would love to work with you on your project. <a href="#Contact">Contact</a> me below!
+                </p>
+            </div>
+        </div>
+
+        <!--GitHub section-->
+        <div class="Row" id="GitHub">
+            <!--Left column-->
+            <div class="Column_1">
+                <h1>GitHub</h1>
+                <p class="center">
+                    You can view my coding projects on my GitHub profile by clicking the logo below:
+                    <div class="github-img">
+                        <a href="https://github.com/the-tech-academy" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
+                    </div>
+                </p>
+            </div>
+            <!--Right column-->
+            <div class="Column_2">
+                <a href="http://www.ericlemiere.com"><img src="images/el-guitar1.JPG" alt="image not found"></a>
+            </div>
+        </div>
+
+        <!--Contact section-->
+        <div class="Row" id="Contact">
+            <!--Contact image, left column-->
+            <div class="Column_2 Column_tall">
+                <img src="images/jumping-harv.jpg" alt="image not found">
+            </div>
+            <!--Contact form, right column-->
+            <div class="Column_1 Column_tall">
+                <h1>Contact</h1>
+                <!--This specifies where and how to send the form data; we are leaving it blank-->
+                <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
+                    <label>Name:</label>
+                        <input type="text" placeholder="name">
+                    <label>Email:</label>
+                        <input type="text" id="Email" name="Email" placeholder="email">
+                    <label>Message:</label>
+                        <input type="text" id="Message" name="Message" placeholder="message">
+                        <input type="submit" value="SUBMIT"> 
+                </form>
+            </div>
+        </div>
+
+
+        <!--Footer section-->
+        <footer>
+            <p>
+                <p class="center">&copy Eric Lemiere, 2021 student of <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a></p>
+                <br>
+            </p>
+        </footer>
+
+    </body>
+
+
+</html>

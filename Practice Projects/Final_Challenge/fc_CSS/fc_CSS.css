@@ -1,0 +1,162 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(182, 234, 255);
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: black;
+}
+
+.container-constricted {
+    max-width: 900px;
+    margin: auto;
+}
+
+.top-left {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    text-align: left;
+}
+
+.top-center {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.top-center h1 {
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
+    font-size: 2.5vw;
+}
+
+.centered-content{
+    text-align: center;
+}
+
+img {
+    filter: contrast(130%);
+    border-radius: 1em;
+    box-shadow: 2px 2px 10px #000000;
+}
+
+video {
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+footer {
+    text-align: center;
+    font-weight: 900;
+    background-color: rgb(0, 150, 209);
+    width: 100%;
+    padding: 10px;
+    left: 0;
+    position: absolute;
+}
+
+table {
+    border: double rgb(4, 0, 63);
+    text-align: center;
+    margin: 4em auto;
+}
+
+table th {
+    background-color: rgb(0, 150, 209);
+    color:black;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+table td {
+    background-color: rgb(255, 255, 255);
+}
+
+
+/*========== NAV BAR =============*/
+.navbar {
+    overflow: hidden;
+    background-color: rgb(0, 150, 209);
+    font-size:large;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 2px;
+    z-index: 100;
+}
+
+.navbar a {
+    color:rgb(255, 255, 255);
+    padding: 1em;
+}
+
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+  }
+
+
+  /*========== 2 column table =============*/
+  .column {
+    float: left;
+    background-color: rgb(255, 255, 255);
+    height: 7em;
+    padding: auto;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .row {
+    margin-top: 20px;
+    margin-bottom: 20px;;
+}
+
+  .left {
+      width: 25%;
+      background-color: rgb(22, 52, 54);
+      color: rgb(255, 255, 255);
+  }
+
+  .right {
+      width: 75%;
+  }
+
+
+
+  /*========== IMAGE HOVER =============*/
+ .pHover-area {
+    background-color: rgb(255, 255, 255);
+    color: rgb(4, 0, 63);
+ } 
+
+.pHover {
+    background-color: rgb(255, 255, 255);
+    transition: 1s ease;
+    height: 22em;
+    background-image: url(../fc_images/great-dane-puppies.jpeg);
+    margin: auto;
+    width: 100%;
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+
+.pHover:hover {
+    color: transparent;
+    opacity: 1;
+}
+ 
+
+@media screen and (max-width: 600px) {
+    body {
+        color: blue;
+    }
+}
