@@ -3,9 +3,9 @@
 	<head>
         <meta charset="UTF-8">
 		<title>Eric Lemiere</title>
-		<link rel="stylesheet" href="./CSS/photo-package.css">
-        <link rel="stylesheet" href="./CSS/menu_rollover_el_website.css">
+		<link rel="stylesheet" href="./CSS/Music-Website.css">
         <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+		<script src="JS/Music-Website.js" defer></script>
 		<style>
             body {
                 font-family: "Audiowide";
@@ -20,9 +20,10 @@
 			<div class="menu_container">
 				<ul class="menu">
 					<a href="#home" id="link"><li>HOME</li></a>
-					<a href="#gallery"><li>RECENT ALBUMS </li></a>
-					<a href="#video"><li>VIDEO </li></a>
-					<a href="#contact"><li>CONTACT </li></a>
+					<a href="#gallery"><li>RECENT ALBUMS</li></a>
+					<a href="#video"><li>VIDEO</li></a>
+					<a href="#live-photos"><li>PHOTOS</li></a>
+					<a href="#contact"><li>CONTACT</li></a>
 				</ul>
 			</div>
 		</div>
@@ -173,7 +174,88 @@
 		</div>
 		<!-- END VIDEO -->
 		
-		
+
+		<!-- LIGHTBOX -->
+		<div id="live-photos">
+			<div>
+                <p><h2>PHOTOS</h2></p>
+				<div class="pic-row flex-container-2">
+					<!-- Thumbnails shown on site -->
+					<div class="pic-column">
+					  <img src="./Images/live-photos/live1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+					</div>
+					<div class="pic-column">
+						<img src="./Images/live-photos/live2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+					</div>
+					<div class="pic-column">
+						<img src="./Images/live-photos/live3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+					</div>
+					<div class="pic-column">
+						<img src="./Images/live-photos/live4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+					</div>
+				</div>
+
+				<!-- Lightbox -->
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
+						
+						<div class="mySlides">
+							<div class="numbertext">1 / 4</div>
+							<img src="./Images/live-photos/live1.jpg" style="width:100%">
+						</div>
+					
+						<div class="mySlides">
+							<div class="numbertext">2 / 4</div>
+							<img src="./Images/live-photos/live2.jpg" style="width:100%">
+						</div>
+					
+						<div class="mySlides">
+							<div class="numbertext">3 / 4</div>
+							<img src="./Images/live-photos/live3.jpg" style="width:100%">
+						</div>
+					
+						<div class="mySlides">
+							<div class="numbertext">4 / 4</div>
+							<img src="./Images/live-photos/live4.jpg" style="width:100%">
+						</div>
+
+						
+					
+						<!-- Next/previous controls of lightbox -->
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+					
+						<!-- Caption text -->
+						<div class="caption-container">
+							<p id="caption"></p>
+						</div>
+					
+						<!-- Thumbnail image controls -->
+						<div class="pic-column">
+							<img class="demo" src="./Images/live-photos/live1.jpg" onclick="currentSlide(1)" alt="Live at Oracle Arena">
+						</div>
+					
+						<div class="pic-column">
+							<img class="demo" src="./Images/live-photos/live2.jpg" onclick="currentSlide(2)" alt="Brave New World Tour">
+						</div>
+					
+						<div class="pic-column">
+							<img class="demo" src="./Images/live-photos/live3.jpg" onclick="currentSlide(3)" alt="Live at The Gramercy Theatre">
+						</div>
+					
+						<div class="pic-column">
+							<img class="demo" src="./Images/live-photos/live4.jpg" onclick="currentSlide(4)" alt="Live at Newport Music Hall">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- END LIGHTBOX -->
+
+
+
 		<!-- CONTACT -->
 		<section id="contact">
 			<div class="container">
@@ -208,7 +290,7 @@
 		<!-- END CONTACT -->
 	
 	<!-- FOOTER -->
-	<div>
+	<div class="footer container">
 		<p>www.ericlemiere.com &nbsp;|&nbsp; &copy; 2021</p>
 	</div>
 	<!-- END FOOTER -->

@@ -1,0 +1,519 @@
+/*===================================
+TEXT SECTION
+===================================*/
+
+html {
+    font-family: sans-serif;
+    -webkit-tap-highlight-color: rgb(0,0,0);
+    -ms-text-size-adjust: 100%;
+}
+
+p, h1, h2, h3, h5{
+	text-align: center;
+	font-family: helvetica;
+	color: white;
+	text-shadow: 4px 4px 4px black;
+}
+
+h1 {
+    line-height: 50px;
+    font-weight: 900;
+    font-size: 50px;
+    font-variant: small-caps;
+    font-family: Audiowide;
+}
+
+h2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#home {
+    padding-top: 100px;
+}
+
+#home h3 {
+    font-weight: lighter;
+}
+
+
+form{
+	text-align: center;
+}
+
+.head-main {
+    font-style: italic;
+}
+
+
+
+/*===================================
+UNDERLINES
+===================================*/
+h2::after {
+    display: block;
+    content: "";
+    height: 2px;
+    width: 10%;
+    background: #ffffff;
+    margin: 5px auto 40px;
+    box-shadow: 4px 4px 4px rgba(0,0,0, 1);
+}
+
+
+/*===================================
+BODY BACKGROUND IMG
+===================================*/
+body{
+    background-image: url('../images/thumb/backdrop_image_1.jpg');
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    -webkit-background-size: cover;
+}
+
+
+/*===================================
+PHOTO SECTION
+===================================*/
+#gallery {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.photo-container{
+	text-align: center;
+    margin: 15px auto;
+    width: 300px;
+    height: 300px;
+}
+
+.photo{
+	position:relative;
+    line-height: 0;
+    margin-bottom: 2em;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px rgb(20, 10, 10);
+    border-radius: 10px;
+}
+
+.photo-container img{
+	max-width: 100%;
+	width: 300px;
+	height: 300px;
+}
+
+.photo-overlay {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0 0.5);
+}
+
+.whitehead {
+    color: #ffffff;
+    line-height: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    justify-content: center;
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: rgba(0,0,0, 0.3);
+    box-shadow: rgba(20, 10, 10, 0.5);
+}
+
+/*===================================
+PHOTO OVERLAY TRANSITIONS
+===================================*/
+
+.photo-overlay {
+    opacity: 0;
+    transition: opacity .1s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.photo-overlay p {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    justify-content: center;
+}
+
+.photo-overlay:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    z-index: 2;
+}
+
+.photo img {
+    transition: transform .5s;
+    transform-origin: 50% 50%;
+}
+
+.photo:hover img {
+    transform: scale(1.05);
+}
+
+
+
+/*===================================
+VIDEO SECTION
+===================================*/
+#video {
+    margin-bottom: 80px;
+    padding: 10px;
+}
+
+#video iframe {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+#video iframe:hover {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.6);
+}
+
+
+/*===================================
+CONTACT SECTION
+===================================*/
+.contact-container {
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: rgba(0,0,0, 0.3);
+    box-shadow: rgba(20, 10, 10, 0.5);
+    padding: 20px;
+}
+
+.contact-container form {
+    font-size: 15px;
+    outline: none;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 12px 12px;
+    width: 60%;
+    border: solid black;
+    margin: 2% auto;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
+    font-family: "Raleway", sans-serif;
+}
+
+.contact-container input[type="text"] {
+    font-size: 15px;
+    outline: none;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 12px 12px;
+    width: 70%;
+    border: solid black;
+    margin: 2% auto;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
+    font-family: "Raleway", sans-serif;
+}
+
+.contact-container input[type="text"]:focus {
+    background-color: rgba(37, 37, 37, 0.5);
+    color: white;
+}
+
+.contact-container input[type="text"]:hover{
+    color:white;
+    background-color: rgba(37, 37, 37, 0.5);
+    border-color: black;
+}
+
+.submit input[type="submit"] {
+    color: slategray;
+    cursor: pointer;
+    font-size: 15px;
+    outline: none;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 12px 12px;
+    width: 30%;
+    border: solid black;
+    margin-top: 30px;
+    margin-left: 0;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
+    font-family: "Raleway", sans-serif;
+    transition: border-color 0.3s color 0.3s background-color 0.3s;
+}
+
+.submit input[type="submit"]:hover{
+    color:black;
+    background-color: rgb(196, 196, 196);
+    border-color: black;
+}
+
+
+/*===================================
+FOOTER SECTION
+===================================*/
+.footer {
+    width: 300px;
+    border-radius: 8px;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+    padding: .5px 10px;
+    background-color: rgba(37, 37, 37, 0.5);
+}
+
+
+/*===================================
+MENU SECTION
+===================================*/
+
+.wrap {
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+}
+
+.menu_container {
+    float: left;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 40px;
+    position: fixed;
+    z-index: 100;
+}
+
+.menu {
+    font: bold 12px/18px sans-serif;
+    text-align: center;
+    display: inline;
+    margin-left: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu li {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    margin-right: -2px;
+    position: relative;
+    padding: 10px 10px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.menu li:hover{
+    background-color: rgb(189, 189, 189);
+    color: rgb(52, 50, 172);
+}
+
+.menu li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.submenu {
+    padding: 0;
+    left: 0;
+    position: absolute;
+    top: 43.5px;
+    width: 125.5px;
+    opacity: 0;
+}
+
+.submenu li {
+    background-color: rgb(175, 175, 175);
+    display: block;
+    color: white;
+}
+
+
+/*===================================
+LIGHTBOX SECTION
+===================================*/
+
+.flex-container-2 {
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: rgba(0,0,0, 0.3);
+    box-shadow: rgba(20, 10, 10, 0.5);
+}
+
+#live-photos {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+ 
+.pic-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+/* Create four equal columns that floats next to eachother */
+.pic-column {
+    float: left;
+    width: 25%;
+}
+
+.pic-column img{
+	max-width: 100%;
+	width: 225px;
+	height: 150px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+  
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.904);
+    z-index: 101;
+}
+  
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 600px;
+}
+
+/* The Close Button */
+.close {
+    color: rgb(168, 168, 168);
+    text-align: center;
+    background-color: rgb(43, 43, 43);
+    width: 45px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+/* Hide the slides by default */
+.mySlides {
+    display: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+  
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+  
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+  
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+  
+/* Caption text */
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+  
+img.demo {
+    opacity: 0.6;
+    width: 150px;
+    height: 100px;
+}
+  
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+  
+img.hover-shadow {
+    transition: 0.3s;
+    cursor: pointer;
+}
+  
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 8px 20px 0 rgba(0, 0, 0, 0.6);
+}
