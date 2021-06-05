@@ -1,14 +1,15 @@
 /***** GENERAL STYLING *****/
 html {
     background-color: black;
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0%;
     opacity: 1;
-    transition: 5s opacity;
+    transition: 3s opacity;
 }
-
+  
 body.fade-out {
     opacity: 0;
     transition: none;
@@ -67,6 +68,8 @@ q {
     font-weight: 100;
 }
 
+
+/********** IMG ************/
 img {
     filter: grayscale(100%);
     border-radius: 8px;
@@ -84,7 +87,7 @@ img:hover {
     transform: scale(1.1);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
     img {
         height: 100px;
         margin-top: 150px;
@@ -102,6 +105,15 @@ img:hover {
     transition: transform 2s;
     transform: scale(1.1);
 }
+
+@media screen and (max-width: 1000px) {
+    .github-img img {
+        margin-top: 50px;
+    }
+}
+
+
+/********** END OF IMG ************/
 
 footer {
     padding: 2%;
@@ -195,7 +207,7 @@ footer {
     margin-bottom: 40px;
     background: rgba(0,0,0, .5);
     border-radius: 8px;
-    color: rgb(255, 255, 255);
+    color: white;
     width: 60%;
     padding: 50px;
     position: relative;
@@ -267,20 +279,26 @@ footer {
 /***** CONTACT FORM STYLING *****/
 /* input[type=text] targets all text input sections of the contact form */
 input[type=text] {
-    width: 100%; /* Each input box covers the full width of the container */
+    width: 49%; /* Each input box covers the full width of the container */
     padding: 12px; /* Adds padding within the text box */
     border: 1px solid #ccc; /* Setting a solid border and its color */
     border-radius: 4px; /* Slightly rounds the corners of the text box border */
     box-sizing: border-box; /* This creates a box with a border around the contact form input boxes */
     margin-top: 6px; /* Adds a margin to the top of the text box */
     margin-bottom: 16px; /* Adds a margin to the bottom of the text box */
+    margin-left: auto;
+    margin-right: auto;
     resize: vertical; /* This allows the user to resize the text boxes vertically */
     font-family:Arial, Helvetica, sans-serif
 }
 
 /* Hover effects for input boxes */
 input[type=text]:hover {
-    box-shadow: 0 0 5px #0000ca inset; /* This creates a blue shadow in the text box when hovered over by the user */
+    box-shadow: 0 0 8px rgba(217, 255, 0, 0.644) inset, 2px 2px 4px rgba(0,0,0, .5); /* This creates a blue shadow in the text box when hovered over by the user */
+}
+
+#Message, #Name{
+    width: 100%;
 }
 
 /* Submit button */
