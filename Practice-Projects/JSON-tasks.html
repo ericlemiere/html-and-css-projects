@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        
+        <title>To Do app</title>
+    </head>
+
+    <!--Body-->
+    <body>
+        <input id="task"><button id="add">Add Item</button>
+        <hr>
+        <div id="todos"></div>
+
+        <div id="carOutput"></div>
+        <div id="carOutput2"></div>
+        <div id="nameOutput"></div>
+
+        <script>
+            var car = '{"make": "Honda", "model": "Civic", "year": "1979", "color": "blue"}';
+            var JSONstring = JSON.stringify(car);
+            document.getElementById("carOutput").innerHTML = JSONstring;
+            
+            var JSONstring2 = JSON.parse(car);
+            document.getElementById("carOutput2").innerHTML = "I drive a " + JSONstring2.year + " " + JSONstring2.model + ".";
+        
+            localStorage.setItem("Name","Gil");
+            document.getElementById("nameOutput").innerHTML = "His stuffed animal's name is " + localStorage.getItem("Name");
+
+        </script>
+
+        <!-- FOOTER -->
+	    <footer>
+		    <p>ericlemiere &nbsp;|&nbsp; &copy; 2021</p>
+        </footer>
+	    <!-- END FOOTER -->
+    </body>
+</html>
