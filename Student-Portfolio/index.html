@@ -11,17 +11,16 @@
 
     <!--Body-->
     <body>
-        <script>
-            document.body.classList.add('fade-out');
-            
-        </script>
+
+        <!-- JavaScript that allows website to fade in when loaded -->
+        <script>document.body.classList.add('fade-out');</script>
 
         <!--NavBar-->
         <div class="NavBar">
             <a class="active" href="#Home">Home</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
+            <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
         </div>
 
         <br>
@@ -90,27 +89,41 @@
             </div>
         </div>
 
-        <!--Contact section-->
-        <div class="Row" id="Contact">
+        
+        <div class="Row">
             <!--Contact image, left column-->
             <div class="Column_2 Column_tall">
                 <a href="https://www.instagram.com/ericlemiere/?hl=en"><img src="images/jumping-harv.jpg" alt="image not found"></a>
             </div>
             <!--Contact form, right column-->
             <div class="Column_1 Column_tall">
-                <h1>Contact</h1>
-                <form action="https://formspree.io/f/xeqvapoy" method="POST"> 
+                
+            </div>
+        </div>
 
-                        <input type="text" id="Name" placeholder="name">
 
-                        <input type="text" id="Email" name="Email" placeholder="email">
-
-                        <input type="text" id="Phone" name="Phone" placeholder="phone #">   
-
-                        <input type="text" id="Message" name="Message" placeholder="message">
-                        <input type="submit" value="SUBMIT">
+        <!--Contact POPUP section-->
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                <form class="form-container" action="https://formspree.io/f/xeqvapoy" method="POST">
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="name" name="name" required>
+                    <label for="email"><b>Email</b></label>		
+                        <input type="text" placeholder="email address" name="email" required>
+                    <label for="phone"><b>Phone</b></label>
+                        <input type="text" placeholder="phone number" name="phone">
+                    <label for="message"><b>Message</b></label>
+                        <input type="text" placeholder="message" name="message">
+                    
+                    <div class="center-buttons">
+                        <button type="submit" class="btn">SEND</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                    </div>
                 </form>
             </div>
+
         </div>
 
 
@@ -121,6 +134,8 @@
             </p>
         </footer>
 
+
+        <!-- JavaScript code to allow site to fade in when site is loaded-->
         <script>
             window.addEventListener('DOMContentLoaded', () => {
                 document.body.classList.remove('fade-out');

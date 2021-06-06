@@ -1,4 +1,6 @@
-/***** GENERAL STYLING *****/
+/*********************************************************************/
+/*******************        GENERAL STYLING         ******************/
+/*********************************************************************/
 html {
     background-color: black;
     scroll-behavior: smooth;
@@ -22,6 +24,8 @@ h1 {
     margin-top: 3%;
     color: #1a1a1a;
     font-size: 3vw;
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
 }
 
 h1:hover {
@@ -41,6 +45,8 @@ p {
     font-size: 18px;
     padding-right: 20px;
     padding-left:20px;
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
 }
 
 p:hover {
@@ -69,7 +75,9 @@ q {
 }
 
 
-/********** IMG ************/
+/*********************************************************************/
+/*******************             IMG                ******************/
+/*********************************************************************/
 img {
     filter: grayscale(100%);
     border-radius: 8px;
@@ -79,12 +87,16 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
 }
 
 img:hover {
     filter: grayscale(0%);
-    transition: transform 2s;
-    transform: scale(1.1);
+    transform: scale(1.02);
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    
 }
 
 @media screen and (max-width: 1000px) {
@@ -98,12 +110,14 @@ img:hover {
     filter: grayscale(0%);
     width: 20%;
     height: auto;
+    
 }
 
-.github-img:hover {
+.github-img img:hover {
     filter: grayscale(0%);
     transition: transform 2s;
-    transform: scale(1.1);
+    transform: scale(1.03);
+    box-shadow: 2px 2px 12px rgba(0,0,0, .5);
 }
 
 @media screen and (max-width: 1000px) {
@@ -112,17 +126,24 @@ img:hover {
     }
 }
 
-
-/********** END OF IMG ************/
+/*********************************************************************/
+/*******************          END OF IMG            ******************/
+/*********************************************************************/
 
 footer {
     padding: 2%;
     background-color: rgba(255,255,255,.6);
 }
 
-/***** END OF GENERAL STYLING *****/
+/*********************************************************************/
+/*******************     END OF GENERAL STYLING     ******************/
+/*********************************************************************/
 
-/***** NAVBAR STYLING *****/
+
+
+/*********************************************************************/
+/*******************            NAVBAR              ******************/
+/*********************************************************************/
 
 .NavBar {
     overflow: hidden;
@@ -144,7 +165,7 @@ footer {
 .NavBar a {
     float: left;
     display: block;
-    border: solid white 1px;
+    /*border: solid white 1px;*/
     border-radius: 4px;
     color: white;
     background: rgb(0, 0, 0);
@@ -159,7 +180,7 @@ footer {
 }
 
 @keyframes moveNavText {
-    from {left: -100vw;}
+    from {left: -40vw;}
     to {left: 0vw;}
 }
 
@@ -174,16 +195,22 @@ footer {
 .NavBar a:hover {
     background-color: #f4f4f4; 
     color: black; 
+    transition-duration: .5s;
+    -webkit-transition-duration: .5s;
 }
 
 /* Navbar home button */
 .NavBar a.active { /* This targets the a element on the navbar with the "active" class */
     /*background-color: darkgray; COMMENTED OUT*/
 }
-/***** END OF NAVBAR STYLING *****/
+/*********************************************************************/
+/*******************        END OF NAVBAR           ******************/
+/*********************************************************************/
 
 
-/***** VIDEO STYLING *****/
+/*********************************************************************/
+/*******************        VIDEO STYLING           ******************/
+/*********************************************************************/
 /* Formatting for background video */
 #bg_video {
     position: fixed; /* This fixes the video to the page */
@@ -203,8 +230,8 @@ footer {
 .Video_Text {
     margin-right: 20%;
     margin-left: 20%;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 100px;
+    margin-bottom: 120px;
     background: rgba(0,0,0, .5);
     border-radius: 8px;
     color: white;
@@ -227,10 +254,15 @@ footer {
 .Video_Text p {
     font-size: 2vw;
 }
+/*********************************************************************/
+/*****                END OF VIDEO STYLING                       *****/
+/*********************************************************************/
 
-/***** END OF VIDEO STYLING *****/
 
-/***** TABLE STYLING -  this section covers the styling of the columns and rows within the table *****/
+
+/*********************************************************************/
+/*****          TABLE STYLING -  this section covers the styling of the columns and rows within the table *****/
+/*********************************************************************/
 
 * { /* The asterisk is a universal selector that applies this effect to all elements on the page */
     box-sizing: border-box; /* This creates a box with a border within which we will place most of our text */
@@ -274,59 +306,120 @@ footer {
 	display: table; /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
 	clear: both; /* This clears any other elements from floating on the left or the right of an element */
 }
-/***** END OF TABLE STYLING *****/
+/*********************************************************************/
+/*****               END OF TABLE STYLING                        *****/
+/*********************************************************************/
 
-/***** CONTACT FORM STYLING *****/
-/* input[type=text] targets all text input sections of the contact form */
-input[type=text] {
-    width: 49%; /* Each input box covers the full width of the container */
-    padding: 12px; /* Adds padding within the text box */
-    border: 1px solid #ccc; /* Setting a solid border and its color */
-    border-radius: 4px; /* Slightly rounds the corners of the text box border */
-    box-sizing: border-box; /* This creates a box with a border around the contact form input boxes */
-    margin-top: 6px; /* Adds a margin to the top of the text box */
-    margin-bottom: 16px; /* Adds a margin to the bottom of the text box */
-    margin-left: auto;
-    margin-right: auto;
-    resize: vertical; /* This allows the user to resize the text boxes vertically */
-    font-family:Arial, Helvetica, sans-serif
+
+
+/*********************************************************************/
+/*****                CONTACT FORM STYLING                       *****/
+/*********************************************************************/
+
+.Pop_Up_Button {
+    position: fixed;
+    bottom: 1.75vw;
+    right: 1.75vw;
+    width: 25vw;
+    background-color: white;
+    color: black;
+    border: solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    -webkit-animation: movePopup 3s;
+    animation: movePopup 3s;
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
 }
 
-/* Hover effects for input boxes */
-input[type=text]:hover {
-    box-shadow: 0 0 8px rgba(217, 255, 0, 0.644) inset, 2px 2px 4px rgba(0,0,0, .5); /* This creates a blue shadow in the text box when hovered over by the user */
+@keyframes movePopup {
+    from {right: -40vw;}
+    to {right: 1.75vw;}
 }
 
-#Message, #Name{
-    width: 100%;
+@-webkit-keyframes movePopup {
+    from {right: -40vw;}
+    to {right: 1.75vw;}
 }
 
-/* Submit button */
-input[type=submit] {
-    background-color: black; 
-    color: white; 
-    font-weight: bold; 
-    padding: 12px 20px; 
-    border: none; /* Removes the border from the submit button */
-    border-radius: 4px; /* Gives the submit button the same rounded corners as the text boxes */
-    cursor: pointer; 
-    display: block; /* Allows the submit button to be centered */
-    margin-left: auto; /* In combination with "margin-right: auto" this will center the submit button */
-    margin-right: auto;
+.form-popup {
+    border: 3px solid gray;
+    z-index: 8;
+    display: none;
+    position: fixed;
+    bottom: .5vw;
+    right: .5vw;
+}
+
+.form-container {
+    position: fixed;
+    bottom: 1.75vw;
+    right: 1.75vw;
+    max-width: 25vw;
+    padding: 1vw;
+    background-color: white;
     font-family: Arial, Helvetica, sans-serif;
+    border-radius: 8px;
 }
 
-input[type=submit]:hover {
-    background-color: white; 
-    color: black; 
-    transform: scale(1.05); 
-    transition: transform 1s; 
+.center-buttons {
+    text-align: center;
 }
 
-form {
-    border-radius: 5px; 
-    background-color: rgba(255,255,255,.5); 
-    padding: 10px; 
-    font-family: Arial, Helvetica, sans-serif
+
+.form-container input[type="text"] {
+    width: 100%;
+    padding: .93vw;
+    margin: .6vw 0 .6vw 0;
+    border: none;
+    background: gainsboro;
+    font-size: 1vw;
 }
-/***** END OF CONTACT FORM STYLING *****/
+
+button {
+    letter-spacing: .3vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 1.5vw;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+button:hover, .form-container .btn:hover {
+    color: white;
+    background-color: rgb(88, 88, 88);
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    border-color: silver;
+}
+
+.form-container .btn {
+    background-color: white;
+    color: black;
+    border-color: black;
+    margin-bottom: 1vh;
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+
+.form-container .cancel {
+    background-color: rgb(65, 5, 5);
+    color: white;
+    border-color: gray;
+}
+
+.form-container .cancel:hover {
+    color: white;
+    background-color: rgb(165, 0, 0);
+    transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+    border-color: black;
+}
+
+
+
+/*********************************************************************/
+/*****               END OF CONTACT FORM STYLING                 *****/
+/*********************************************************************/
