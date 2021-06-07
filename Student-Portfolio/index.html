@@ -15,9 +15,13 @@
         <!-- JavaScript that allows website to fade in when loaded -->
         <script>document.body.classList.add('fade-out');</script>
 
+
+        <!-------------------------------------------------------->
         <!--NavBar-->
+        <!-------------------------------------------------------->
         <div class="NavBar">
             <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
             <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
@@ -26,15 +30,22 @@
         <br>
         <br>
 
+
+        <!-------------------------------------------------------->
         <!-- Background Video -->
-        <div id="Home">
+        <!-------------------------------------------------------->
+        <span class="anchor"  id="Home"></span>
+        <div>
             <video autoplay muted loop id="bg_video">
                <source src="images/video/blue-wave.mp4" type="video/mp4">
                Your browser may be out of date and cannot display video.
             </video>
         </div>
 
+
+        <!-------------------------------------------------------->
         <!-- Video Text Overlay -->
+        <!-------------------------------------------------------->
         <div class="Video_Text">
             <h1 class="white-text">Welcome!</h1>
             <hr>
@@ -51,8 +62,51 @@
             </strong>
         </div>
 
+
+        <!-------------------------------------------------------->
+        <!-- Slideshow -->
+        <!-------------------------------------------------------->
+        <span class="anchor" id="Slideshow"></span>
+        <div id="Slideshow_Background">
+            <div id="Slideshow_Container">
+                <!-- Slide 1 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/family.jpg" alt="family pic">
+                    <div class="slideshow-text">My family, Amber and Helo</div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="mySlides fade">
+                    <a href="http://www.ericlemiere.com"><img class="Slideshow_Images" src="images/el-guitar1.JPG" alt="guitar pic"></a>
+                    <div class="slideshow-text">Click the image to see my music website!</div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="mySlides fade">
+                    <a href="https://www.instagram.com/ericlemiere/?hl=en"><img class="Slideshow_Images" src="images/jumping-harv.jpg" alt="dog pic"></a>
+                    <div class="slideshow-text">Click the image to go to my Instagram!</div>
+                </div>
+
+                <!-- Prev and Next buttons-->
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+
+        </div>
+
+
+        
+        <!-------------------------------------------------------->
         <!--About section-->
-        <div class="Row" id="About">
+        <!-------------------------------------------------------->
+        <span class="anchor" id="About"></span>
+        <div class="Row">
             <!--Left column-->
             <div class="Column_2">
                 <img src="images/family.jpg" alt="Family Pic">
@@ -63,25 +117,30 @@
                 <p>
                     Who am I? A musician who likes to code. Married to Amber since 2007, and father to Helo since 2020. Animal enthusiast. 
                     <br>
-                    <br>I will soon finish the Software Developer Boot Camp from <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a> and will have experience in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. 
+                    <br>I will soon finish the Software Developer Boot Camp from <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a> and will have experience in the following web and programming languages:
+                    <br>HTML, CSS, JavaScript, SQL, C# and more. 
                     <br>
                     <br>Once I am a full-stack developer I would love to work with you on your project. <a href="#Contact">Contact</a> me below!
                 </p>
             </div>
         </div>
 
+
+        <!-------------------------------------------------------->
         <!--GitHub section-->
-        <div class="Row" id="GitHub">
+        <!-------------------------------------------------------->
+        <span class="anchor" id="GitHub"></span>
+        <div class="Row">
             <!--Left column-->
             <div class="Column_1">
                 <h1>GitHub</h1>
-                <p class="center">
+                <p class="ghCenter">
                     You can view my coding projects on my GitHub profile
-                    <br>by clicking the logo below:
+                    <br>by clicking the logo below:</p>
                     <div class="github-img">
                         <a href="https://github.com/ericlemiere/html-and-css-projects" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
                     </div>
-                </p>
+                
             </div>
             <!--Right column-->
             <div class="Column_2">
@@ -90,19 +149,21 @@
         </div>
 
         
+        <!-- Extra blank Row and Column commented out
         <div class="Row">
-            <!--Contact image, left column-->
-            <div class="Column_2 Column_tall">
+            <div class="Column_2">
                 <a href="https://www.instagram.com/ericlemiere/?hl=en"><img src="images/jumping-harv.jpg" alt="image not found"></a>
             </div>
-            <!--Contact form, right column-->
-            <div class="Column_1 Column_tall">
+            <div class="Column_1">
                 
             </div>
         </div>
+        -->
 
 
+        <!-------------------------------------------------------->
         <!--Contact POPUP section-->
+        <!-------------------------------------------------------->
         <div id="Contact">
             <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
             <div class="form-popup" id="myForm">
@@ -127,7 +188,10 @@
         </div>
 
 
+
+        <!-------------------------------------------------------->
         <!--Footer section-->
+        <!-------------------------------------------------------->
         <footer>
             <p>
                 <p class="center">&copy Eric Lemiere, 2021 student of <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a></p>
