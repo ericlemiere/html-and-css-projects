@@ -4,8 +4,8 @@ These are some sample websites I created using HTML and CSS.
 ## Projects:
 
 - [Portfolio Website](http://www.lemierecs.com)
-- [Music Website](https://www.github.com/ericlemiere/html-and-css-projects/Music-Website/Music-Website.html)
-- [Theater Website](https://www.github.com/ericlemiere/html-and-css-projects/Theater-Project/theater-project.html)
+- [Music Website](https://github.com/ericlemiere/html-and-css-projects/tree/main/Music-Website)
+- [Theater Website](https://github.com/ericlemiere/html-and-css-projects//tree/main/Theater-Project)
 
 
 ### Portfolio Website:
