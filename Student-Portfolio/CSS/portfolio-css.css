@@ -172,6 +172,7 @@ footer {
 .NavBar a {
     float: left;
     display: block;
+    cursor: pointer;
     /*border: solid white 1px;*/
     border-radius: 4px;
     color: white;
