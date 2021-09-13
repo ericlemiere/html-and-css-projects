@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="UTF-8">
+		<title>JQ demo</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	</head>	
+	<body>
+
+
+
+
+
+        <script>
+            $(document).ready(function() {
+                $("html").append(
+                    "<body>\
+                        <div id='container'>\
+                            <div id='inner'>\
+                                <h1>Basic jQuery</h1>\
+                                <p id='1'>Click here to hide this element over 2 seconds</p>\
+                                <p id='2'>Click here to change the font to red</p>\
+                                <p id='3'>Click here to hide the h1 element</p>\
+                            </div>\
+                        </div>\
+                    </body>"
+                );
+                //This targets p with id of 1 to hide the element upon click
+                $("#1").click(function() {
+                    $('#1').hide(2000);
+                });
+                //Changes font color when clicked
+                $("#2").click(function() {
+                    $("#2").css({"color":"red"}); 
+                });
+                //Clicking the p element with id 3 hides the h1 element
+                $("#3").click(function() {
+                    $('h1').fadeOut();
+                });
+                //Targets the 'inner' div tag and adds CSS visuals
+                $('#inner').css({"background-color":"rgb(200,200,200)","width":"50%","margin-left":"25%","text-align":"center",
+                    "padding":"30px 0"});
+            });
+
+        </script>
+		
+	</body>
+</html>
