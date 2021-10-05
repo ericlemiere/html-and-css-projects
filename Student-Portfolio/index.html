@@ -21,9 +21,8 @@
         <!-------------------------------------------------------->
         <div class="NavBar">
             <a class="active" href="#Home">Home</a>
-            <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
-            <a href="#GitHub">GitHub</a>
+            <a href="#Projects">Projects</a>
             <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
         </div>
 
@@ -62,45 +61,6 @@
             </strong>
         </div>
 
-
-        <!-------------------------------------------------------->
-        <!-- Slideshow -->
-        <!-------------------------------------------------------->
-        <span class="anchor" id="Slideshow"></span>
-        <div id="Slideshow_Background">
-            <div id="Slideshow_Container">
-                <!-- Slide 1 -->
-                <div class="mySlides fade">
-                    <img class="Slideshow_Images" src="images/family.jpg" alt="family pic">
-                    <div class="slideshow-text">My family, Amber and Helo</div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="mySlides fade">
-                    <a href="http://www.ericlemiere.com"><img class="Slideshow_Images" src="images/el-guitar1.JPG" alt="guitar pic"></a>
-                    <div class="slideshow-text">Click the image to see my music website!</div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="mySlides fade">
-                    <a href="https://www.instagram.com/ericlemiere/?hl=en"><img class="Slideshow_Images" src="images/jumping-harv.jpg" alt="dog pic"></a>
-                    <div class="slideshow-text">Click the image to go to my Instagram!</div>
-                </div>
-
-                <!-- Prev and Next buttons-->
-                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-            <br>
-
-            <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
-            <div style="text-align: center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span> 
-            </div>
-
-        </div>
-
-
         
         <!-------------------------------------------------------->
         <!--About section-->
@@ -109,19 +69,65 @@
         <div class="Row">
             <!--Left column-->
             <div class="Column_2">
-                <img src="images/heloUp.jpg" alt="Family Pic">
+                <!-------------------------------------------------------->
+                <!-- Slideshow -->
+                <!-------------------------------------------------------->
+                <span class="anchor" id="Slideshow"></span>
+                <div id="Slideshow_Background">
+                    <div id="Slideshow_Container">
+                        <!-- Slide 1 -->
+                        <div class="mySlides fade">
+                            <img class="Slideshow_Images" src="images/family.jpg" alt="family pic">
+                            <div class="slideshow-text">My family: Amber and Helo</div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="mySlides fade">
+                            <a href="http://www.ericlemiere.com"><img class="Slideshow_Images" src="images/el-guitar1.JPG" alt="guitar pic"></a>
+                            <div class="slideshow-text">Click the image to see my music website!</div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="mySlides fade">
+                            <a href="https://www.instagram.com/ericlemiere/?hl=en"><img class="Slideshow_Images" src="images/jumping-harv.jpg" alt="dog pic"></a>
+                            <div class="slideshow-text">Click the image to go to my Instagram!</div>
+                        </div>
+
+                        <!-- Prev and Next buttons-->
+                        <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+
+
+                    </div>
+                    <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+                    <div style="text-align: center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+
+
+        </div>
+
+
+
+
+                <!--<a href="http://www.ericlemiere.com"><img src="{% static 'images/live1.jpg' %}" alt="image not found"></a>-->
             </div>
             <!--Right column-->
             <div class="Column_1">
                 <h1>About</h1>
                 <p>
-                    Who am I? A musician who likes to code. Married to Amber since 2007, and father to Helo since 2020. Also an animal enthusiast. 
+                    Software developer. Musician. NBA fan. Married to Amber since 2007, and father to Helo since 2020. Also an animal enthusiast who has adopted 2 Great Danes.
                     <br>
-                    <br>I will soon finish the Software Developer Boot Camp from <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a> and will have experience in the following web and programming languages:
-                    <br>HTML, CSS, JavaScript, SQL, Python, C# and more. 
-                    <br>
-                    <br>Once I am a full-stack developer I would love to work with you on your project. Click the contact tab to get in touch!
+                    <br>In 2021, I completed the Software Developer Boot Camp from <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a> and have experience with the following:
+                    <br><br>HTML, CSS, JavaScript, SQL, Python, Django, C#, MVC, Azure, and more.
+                    <br><br>
                 </p>
+                <div style="text-align: center;">
+                    <p>
+                        <a href="https://www.linkedin.com/in/ericlemiere/" target="_blank"><button class="button2">LinkedIn</button></a>
+                        <a href="https://docs.google.com/document/d/16zLvjnMNH4p7P_SXiXq4KPsBmJ3uPrZFLcRYF1Ofqmk/export?format=pdf" target="_blank"><button class="button2">R&eacutesum&eacute</button></a>
+                    </p>
+                </div>
             </div>
         </div>
 
@@ -129,14 +135,16 @@
         <!-------------------------------------------------------->
         <!--GitHub section-->
         <!-------------------------------------------------------->
-        <span class="anchor" id="GitHub"></span>
+        <span class="anchor" id="Projects"></span>
         <div class="Row">
             <!--Left column-->
             <div class="Column_1">
-                <h1>GitHub</h1>
+                <h1>Projects</h1>
                 <p class="ghCenter">
-                    You can view my coding projects on my GitHub profile
-                    <br>by clicking the logo below:</p>
+                    You can view my coding projects on my GitHub profile by clicking the logo below.
+                    Also, click the NBA Logo to the right to read about a simple web app I made for my fantasy basketball leagues.
+                </p>
+                    <br>
                     <div class="github-img">
                         <a href="https://github.com/ericlemiere?tab=repositories" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
                     </div>
@@ -144,7 +152,7 @@
             </div>
             <!--Right column-->
             <div class="Column_2">
-                <a href="http://www.ericlemiere.com"><img src="images/live1.jpg" alt="image not found"></a>
+                <a href="https://github.com/ericlemiere/NBAapp"><img src="images/nba-logo.jpeg" alt="image not found"></a>
             </div>
         </div>
 
@@ -194,7 +202,7 @@
         <!-------------------------------------------------------->
         <footer>
             <p>
-                <p class="center">&copy Eric Lemiere, 2021 student of <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a></p>
+                <p class="center">&copy Eric Lemiere, 2021</p>
             </p>
         </footer>
 
