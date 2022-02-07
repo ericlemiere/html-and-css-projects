@@ -200,7 +200,7 @@ footer {
 /* Screens 600px and smaller will display navbar links equally distributed */
 @media screen and (max-width: 600px) {
     .NavBar a{
-        width: 25%; /* This makes each link take up 1/4 of the navbar */
+        width: 20%; 
         font-size: 12px;
     }
 }

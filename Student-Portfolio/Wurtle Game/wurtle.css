@@ -1,0 +1,170 @@
+:root {
+    --yellow: rgb(156, 141, 0);
+    --wrong: rgb(163, 163, 163);
+}
+
+
+
+body {
+    text-align: center;
+    background-color: rgb(49, 49, 49);
+}
+
+h1 { 
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    color: rgb(172, 172, 172);
+    font-size: 3em;
+}
+
+
+.main {
+    margin: auto;
+    margin-top: 0;
+    width: fit-content;
+    height: 800px;
+    padding: 2vw;
+    background-image: url('./images/wurtle.png');
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+}
+
+
+
+.squares {
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: rgb(37, 37, 37);
+    padding: 1vw;
+    width: fit-content;
+}
+
+.square  {
+    float: left;
+    margin: 2px;
+    padding: 1vw;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(163, 163, 163);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 1.9rem;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center; /* center the content horizontally */
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+}
+
+/* ===================  ANIMATIONS ===================*/
+
+@keyframes rightSpot {
+    from {background-color: rgb(37, 37, 37);}
+    to {background-color: green;}
+}
+
+@keyframes rightLetter {
+    from {background-color: rgb(37, 37, 37);}
+    to {background-color: var(--yellow)}
+}
+
+@keyframes wrongLetter {
+    from {background-color: rgb(37, 37, 37);}
+    to {background-color: var(--wrong);}
+}
+
+@keyframes rightSpotKeyboard {
+    from {background-color: rgb(129, 129, 129);}
+    to {background-color: green;}
+}
+
+@keyframes rightLetterKeyboard {
+    from {background-color: rgb(129, 129, 129);}
+    to {background-color: var(--yellow);}
+}
+
+@keyframes wrongLetterKeyboard {
+    from {color: white;}
+    to {color: var(--wrong);}
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .square {
+    }
+
+    .square .main {
+        width: 100%;
+    }
+    
+}
+
+.keyboard { 
+    margin: auto;
+    margin-top: 20px;
+    text-align: center; 
+}
+
+table { text-align: center;}
+
+.keyboardTable {
+    margin: auto;
+    margin-top: 0px;
+
+    width: fit-content;
+}
+
+
+.keyBtn {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+    color: white;
+    background-color: var(--wrong);
+    width: 2rem;
+    height: 2.2rem; 
+    border-style: none;
+    cursor: pointer;
+}
+
+.backspace { width: 2rem;}
+
+.keyBtn:hover {
+    background-color: rgb(88, 88, 88);
+}
+
+
+.userInput {
+    margin: auto;
+    text-align: center;
+    padding: 1vw;
+    width: 180px;
+}
+
+
+.Btn {
+    width: 140px;
+    height: 40px;
+    background-color: var(--wrong);
+    color: rgb(255, 255, 255);
+    padding: 8px;
+    border-style: none;
+    border-color: rgb(189,189,189);
+    margin-bottom: 20px;
+}
+
+.Btn:hover {
+    background-color: rgb(92, 92, 92);
+    color:rgb(199, 199, 199);
+    border-style: none;
+    border-color: rgb(168, 168, 168);
+}
+
+.BtnNewGame {
+    background-color: rgb(63, 15, 0);
+    margin-top: 20px;
+}
+
