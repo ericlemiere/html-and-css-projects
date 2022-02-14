@@ -4,7 +4,7 @@ var arrayIndex = Math.floor(Math.random() * 220);
 
 const words = [
     "ABHOR", "ABORT", "ABUSE", "ACRES", "ABOVE", "ACHES", "AGONY", "ALBUM", "AWOKE", "AUDIT",
-    "BRUTE", "BLACK", "BOAST", "BADGE", "BASIC", "BACON", "BROWN", "BRAWLS", "BONED", "BLINK",
+    "BRUTE", "BLACK", "BOAST", "BADGE", "BASIC", "BACON", "BROWN", "BRAWL", "BONED", "BLINK",
     "CAPED", "CAULK", "CHILD", "CHEWY", "CLEAR", "CLOTH", "COUPE", "CRANE", "CRUST", "CUSHY",
     "DAILY", "DEATH", "DECOY", "DEPTH", "DIVOT", "DOING", "DWARF", "DRONE", "DOZEN", "DANCE",
     "EARTH", "EBONY", "EDICT", "ENTRY", "EXTRA", "EMOTE", "ETHIC", "EXUDE", "EARLY", "ELBOW",
@@ -30,16 +30,7 @@ const words = [
 
 
 
-// ENTER key triggers the GUESS button
-// var input = document.getElementById("inputText");
-// input.addEventListener("keyup", function(event) {
-//   if (event.key === 'Enter') {
-//     event.preventDefault();
-//     document.getElementById("guessBtn").click();
-//   }
-// });
-
-
+document.getElementById("guessBtn").disabled = true;
 var letterRow = 1;
 var letterCol = 0;
 function keyboard(letter) {
@@ -49,37 +40,118 @@ function keyboard(letter) {
         {
             letterCol--;
             let rowID = `r${letterRow}c${letterCol}`;
-            document.getElementById(rowID).innerHTML = "";
+            var square = document.getElementById(rowID);
+            square.innerHTML = "";
+            document.getElementById("guessBtn").disabled = true;
+
+            square.animate({
+                borderBottomColor: ["white", "rgb(163, 163, 163)"],
+                borderTopColor: ["white", "rgb(163, 163, 163)"],
+                borderLeftColor: ["white", "rgb(163, 163, 163)"],
+                borderRightColor: ["white", "rgb(163, 163, 163)"],
+                backgroundColor: ["rgba(78,0,0,0.3)", "rgba(163, 163, 163, 0)"],
+                transform: 'scale(0.98)'
+            }, {
+                delay: 0,          
+                easing: "ease-in-out", 
+                duration: 500,        
+                iterationCount: 1,     
+            });
         } 
     }
     else {
         if (letterCol < 5) {
             let rowID = `r${letterRow}c${letterCol}`;
-            document.getElementById(rowID).innerHTML = letter;
+            var square = document.getElementById(rowID);
+            square.innerHTML = letter;
+
+            square.animate({
+                borderBottomColor: ["white", "rgb(163, 163, 163)"],
+                borderTopColor: ["white", "rgb(163, 163, 163)"],
+                borderLeftColor: ["white", "rgb(163, 163, 163)"],
+                borderRightColor: ["white", "rgb(163, 163, 163)"],
+                backgroundColor: ["rgba(255, 255, 255, 0.24)", "rgba(163, 163, 163, 0)"]
+            }, {
+                delay: 0,            
+                easing: "ease-in-out", 
+                duration: 500,      
+                iterationCount: 1,    
+            });
+
+            square.animate({
+                transform: 'scale(1.05)',
+            }, {
+                easing: "ease-in-out", 
+                duration: 200,      
+                iterationCount: 1,
+            });
+
             letterCol++;
         }
+    }
+    if (letterCol == 5) {
+        document.getElementById("guessBtn").disabled = false;
     }
 }
 
 function nextLine() { 
     letterCol = 0;
     letterRow++;
+    document.getElementById("guessBtn").disabled = true;
 }
 
+
 var guesses = 1;
+//var word = "DEEDS";
+var word = words[arrayIndex];
+var wordCheck = word;
 function submitGuess() {
-    var word = words[arrayIndex];
+    
     var correctCount = 0;
+
+    // =========================================================
+    /* This section of code checks to see if the word is valid, 
+    but I can only check against my list of words. In order to 
+    get it working correctly, I would need a massive, inclusive
+    list of 5 letter words to check against */
+    
+    // let userWord = "";
+    // for (let col = 0; col < 5; col++) {
+    //     let rowID = `r${guesses}c${col}`;
+    //     userWord += document.getElementById(rowID).innerHTML;
+    // }
+
+    // let validWord = false;
+    // for (let ii = 0; ii < 220; ii++) {
+    //     if (userWord == words[ii]) validWord = true;
+    // }
+    // if (validWord == false) alert("Invalid Word");
+    // =========================================================
+
     if (guesses < 7) {
+        // this for loop finds correct letters in correct spots, 
+        // then replaces that letter in wordCheck with an underscore
+        // in order to check against that in next for loop
+        for (let col = 0; col < 5; col++) {
+            let rowID = `r${guesses}c${col}`;
+            let letterSq = document.getElementById(rowID).innerHTML;
+            let keyboardBtnID = `btn${letterSq}`;
+            if (letterSq === word[col]) {
+                wordCheck = wordCheck.replace(letterSq, "_");
+            }
+        }
+
+        // This for loop does the actual verification.
         for (let col = 0; col < 5; col++) {
             
             let rowID = `r${guesses}c${col}`;
             let letterSq = document.getElementById(rowID).innerHTML;
             let keyboardBtnID = `btn${letterSq}`;
-            if (letterSq === word[col]) {
-                
-                document.getElementById(keyboardBtnID).style.animation = "rightSpotKeyboard 1s forwards"
-                document.getElementById(rowID).style.animation = "rightSpot 1s forwards"
+
+            // Turn square green if the letters match in the square and word
+            if (word[col] === letterSq) {
+                document.getElementById(keyboardBtnID).style.animation = "rightSpotKeyboard 1s forwards";
+                document.getElementById(rowID).style.animation = "rightSpot 1s forwards";
                 correctCount++;
 
                 if (correctCount == 5) {
@@ -87,33 +159,77 @@ function submitGuess() {
                     {
                         setTimeout(function()
                         {
-                            alert("You WIN!");
+                            document.getElementById("gameOverMsg").innerHTML = "You WIN!";
+                            document.getElementById("gameOver").style.display = "block";
+                            document.getElementById("keyboard").style.display = "none";
                         }, 
-                        1400);
+                        1000);
                     });   
                 }
             }
-            else if (word.includes(letterSq)) {
-                document.getElementById(keyboardBtnID).style.animation = "rightLetterKeyboard 1s forwards"
-                document.getElementById(rowID).style.animation = "rightLetter 1s forwards"
+
+            
+            // else if (wordCheck[col] === "_" && word[col] != letterSq && wordCheck.includes(letterSq) == true) {
+            //     document.getElementById(keyboardBtnID).style.animation = "rightLetterKeyboard 1s forwards";
+            //     document.getElementById(rowID).style.animation = "rightLetter 1s forwards";
+            //     correctCount = 0;
+            // }
+
+            // 
+            // else if (wordCheck[col] === "_" && word.includes(letterSq) == false) {
+            //     document.getElementById(rowID).style.animation = "wrongLetter 1s forwards";
+            //     document.getElementById(keyboardBtnID).style.animation = "wrongLetterKeyboard 1s forwards";
+            //     document.getElementById(keyboardBtnID).onclick = null;
+            //     correctCount = 0;
+            // }
+
+
+            
+
+            // Make square yellow if wordCheck contains the letter.
+            // This allows for words with more than one of the same letter.
+            else if (wordCheck.includes(letterSq)) {
                 correctCount = 0;
+                document.getElementById(keyboardBtnID).style.animation = "rightLetterKeyboard 1s forwards";
+                document.getElementById(rowID).style.animation = "rightLetter 1s forwards";
+                wordCheck = wordCheck.replace(letterSq, "_");
             }
-            else {
-                document.getElementById(keyboardBtnID).style.animation = "wrongLetterKeyboard 1s forwards"
-                document.getElementById(rowID).style.animation = "wrongLetter 1s forwards"
+
+            // If the word does not contain the letter, then:
+            // The square is gray and the keyboard button is disabled.
+            // If the word DOES contain the letter, the next 'else if' is run.
+            else if (word.includes(letterSq) == false) {
                 correctCount = 0;
+                document.getElementById(rowID).style.animation = "wrongLetter 1s forwards";
+                document.getElementById(keyboardBtnID).style.animation = "wrongLetterKeyboard 1s forwards";
+                document.getElementById(keyboardBtnID).onclick = null;
             }
+
+            // If the word DOES contain the letter (and previous 'else if' is bypassed) BUT the wordCheck does NOT,
+            // then the square is grayed out but the keyboard is unchanged.
+            // This is because the word has more than one of the same letter.
+            // This accounts for the user entering multiples of the same letter.
+            else if (wordCheck.includes(letterSq) == false) {
+                correctCount = 0;
+                document.getElementById(rowID).style.animation = "wrongLetter 1s forwards";
+            }  
         }
+
+        wordCheck = word;
+
         guesses++;
         if (guesses == 7 && correctCount < 5) {
             $(document).ready(function()
             {
                 setTimeout(function()
                 {
-                    alert("You LOSE.");
+                    document.getElementById("showWord").innerHTML = "The word was: " + word;
+                    document.getElementById("gameOver").style.backgroundColor = "rgb(83, 83, 83)";
+                    document.getElementById("gameOver").style.display = "block";
+                    document.getElementById("keyboard").style.display = "none";
                 }, 
-                400);
-            });    
+                1000);
+            });     
         }
     }
 }

@@ -16,11 +16,11 @@
 </head>
 <body>
 
-    <div id="app">
+    <div class="app" id="app">
         <div class="main">
             <h1>WURTLE</h1>
-
             <div class="squares">
+                
                 <div class="row">
                     <div class="square" id="r1c0"></div>
                     <div class="square" id="r1c1"></div>
@@ -65,6 +65,13 @@
                 </div>
             </div>
 
+            <div class="gameOver" id="gameOver">
+                <br>
+                <h2 id="showWord"></h2>
+                <h1 id="gameOverMsg"></h1>
+                <button class="Btn BtnNewGame" onClick="window.location.reload();">Play Again</button>
+            </div>
+
             <div class="keyboard" id="keyboard">
                 <table class="keyboardTable">
                     <tr>
@@ -95,6 +102,7 @@
                 </table>
                 <table class="keyboardTable">  
                     <tr>
+                        <td class="keyBtn"><button id="guessBtn" onclick="submitGuess();nextLine();">GUESS</button></td>
                         <td class="keyBtn" id="btnZ" onclick="keyboard('Z')">Z</td>
                         <td class="keyBtn" id="btnX" onclick="keyboard('X')">X</td>
                         <td class="keyBtn" id="btnC" onclick="keyboard('C')">C</td>
@@ -107,10 +115,7 @@
                 </table>
             </div>
 
-            <div class="userInput">
-                <button class="Btn" id="guessBtn" onclick="submitGuess();nextLine();">GUESS</button>
-                <button class="Btn BtnNewGame" onClick="window.location.reload();">RESET GAME</button>
-            </div>
+            
         </div>
 
 
