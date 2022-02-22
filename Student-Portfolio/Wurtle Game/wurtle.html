@@ -12,15 +12,33 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">       
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
 </head>
 <body>
 
     <div class="app" id="app">
         <div class="main">
+            <div style="position: relative; width: 0; height: 0">
+                <div class="qMark" id="qMark" onclick="showDirections(1)"><i class="fa fa-question-circle"></i></div>
+                
+            </div>
+            
             <h1>WURTLE</h1>
+
             <div class="squares">
                 
+                <div class="directions" id="directions">
+                    <h2 id="howToPlay">How to play:</h2>
+                    <p>The goal is to correctly guess the 5-letter word. Guess any 5-letter word:</p>
+                    <img class="directionImg" src="./images/guessWord.png" alt="">
+                    <p>A gray square means the word does not contain that letter.</p>
+                    <p>A yellow square means the word contains that letter, but it is in the wrong position.</p>
+                    <p>A green square means the letter is in the word and in the correct position.</p>
+                    
+                    <button class="Btn closeDirections" onclick="showDirections(1)">Close</button>
+                </div>
+
                 <div class="row">
                     <div class="square" id="r1c0"></div>
                     <div class="square" id="r1c1"></div>
@@ -110,7 +128,7 @@
                         <td class="keyBtn" id="btnB" onclick="keyboard('B')">B</td>
                         <td class="keyBtn" id="btnN" onclick="keyboard('N')">N</td>
                         <td class="keyBtn" id="btnM" onclick="keyboard('M')">M</td>
-                        <td class="keyBtn backspace" onclick="keyboard('xxx')">&#8678;</td>
+                        <td class="keyBtn backspace" id="btnxxx" onclick="keyboard('xxx')">&#8678;</td>
                     </tr>
                 </table>
             </div>

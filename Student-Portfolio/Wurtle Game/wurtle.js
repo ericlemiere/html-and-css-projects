@@ -1,30 +1,45 @@
 
 // RANDOM NUMBER GENERATOR
-var arrayIndex = Math.floor(Math.random() * 220);
+var arrayIndex = Math.floor(Math.random() * 370);
 
 const words = [
     "ABHOR", "ABORT", "ABUSE", "ACRES", "ABOVE", "ACHES", "AGONY", "ALBUM", "AWOKE", "AUDIT",
+    "ABACK", "AZURE", "AXLES", "AWFUL", "AWARD", "AVERT", "ATONE", "AUDIO", "ASKED", "ARROW",
+    "BACKS", "BADLY", "BANJO", "BAYOU", "BEING", "BEFIT", "BELOW", "BIRCH", "BLIND", "BLITZ",
     "BRUTE", "BLACK", "BOAST", "BADGE", "BASIC", "BACON", "BROWN", "BRAWL", "BONED", "BLINK",
     "CAPED", "CAULK", "CHILD", "CHEWY", "CLEAR", "CLOTH", "COUPE", "CRANE", "CRUST", "CUSHY",
+    "CAMEL", "CYCLE", "CANOE", "CARGO", "CHAMP", "CLAMP", "CLOUD", "COMBS", "CORAL", "CROWD",
     "DAILY", "DEATH", "DECOY", "DEPTH", "DIVOT", "DOING", "DWARF", "DRONE", "DOZEN", "DANCE",
+    "DECAF", "DEPOT", "DIMES", "DIRTY", "DODGE", "DOOZY", "DRAFT", "DRYER", "DRUGS", "DAIRY",
     "EARTH", "EBONY", "EDICT", "ENTRY", "EXTRA", "EMOTE", "ETHIC", "EXUDE", "EARLY", "ELBOW",
+    "EAGLE", "EIGHT", "EMAIL", "EMBER", "ENEMY", "EXIST", "EYING", "EXILE", "EQUIP", "ENVOY",
     "FACTS", "FAVOR", "FROST", "FILMY", "FLIRT", "FORUM", "FRONT", "FRYER", "FUNKY", "FELON",
+    "FABLE", "FAULT", "FERAL", "FIELD", "FIFTY", "FIXES", "FLASK", "FLUKE", "FOULS", "FUELS",
     "GALOP", "GAVEL", "GECKO", "GIANT", "GLAZE", "GRANT", "GUILD", "GROWL", "GRIND", "GRAVY",
+    "GAWKS", "GLARE", "GREED", "GLOVE", "GROOM", "GOLFS", "GRAPH", "GRUNT", "GUEST", "GROUP",
     "HABIT", "HAWKS", "HEIST", "HERTZ", "HUMAN", "HUSKY", "HOWDY", "HOTEL", "HORSE", "HIKER",
+    "HALOS", "HAUNT", "HEARD", "HEAVY", "HIKED", "HOBBY", "HONOR", "ALBUM", "HUMID", "HYENA",
     "IDEAL", "ICONS", "INDEX", "INFER", "INKED", "IVORY", "IRATE", "INSET", "IMAGE", "IMPLY",
     "JOCKY", "JUICE", "JUMBO", "JOKER", "JOUST", "QUIET", "QUEST", "QUAIL", "QUILT", "QUICK",
     "KNIFE", "UNFIT", "ULCER", "URINE", "USHER", "USING", "UNZIP", "UPSET", "ULTRA", "KIOSK",
     "LACES", "LAUGH", "LEASH", "LEMON", "LIMBO", "LIVER", "LOSER", "LONGS", "LEGAL", "LAYER",
+    "LABOR", "LANKY", "LAYUP", "LIKEN", "LITER", "LUCID", "LUNGS", "LYING", "LURCH", "LIMBS",
     "MAGIC", "MANGO", "MELON", "MOCHA", "MOVIE", "MULCH", "MUTED", "MINCE", "MARSH", "MANOR",
+    "MADLY", "MANLY", "MERCY", "MILKY", "MINOR", "MOGUL", "MONEY", "MOURN", "MUCUS", "MORON",
     "NASTY", "NEWLY", "NOTES", "NUDGE", "NYLON", "NOTCH", "NOMAD", "NOBLE", "NAKED", "NACHO",
+    "NOISE", "NOVEL", "NAVEL", "NEIGH", "NOTED", "NUTTY", "NERDS", "NAMED", "NEWTS", "NINJA",
     "OFTEN", "OCEAN", "ORBIT", "ORCAS", "OUGHT", "OWNED", "OVARY", "OUNCE", "ORATE", "ONSET",
     "PERKY", "PESTO", "PHONE", "PILOT", "PIGMY", "PIXEL", "PLATE", "POLKA", "PATCH", "POURS",
+    "PARTY", "PAWNS", "PERIL", "PHONE", "PIGMY", "PILAF", "PINTO", "PLANT", "PLUMB", "POOCH",
     "RADIO", "RANGE", "RAPID", "REPLY", "RESIN", "RHYME", "ROUTE", "RUGBY", "RIDGE", "RISKY",
+    "RABID", "RANKS", "RECAP", "REIGN", "REUSE", "RISEN", "ROUGE", "RURAL", "RIGOR", "RHINO",
     "SHARP", "SHELF", "SHINE", "SLICE", "SOLID", "SPACE", "STAND", "STONE", "SCOLD", "SPOUT",
+    "SALAD", "SAUCY", "SCALD", "SCARF", "SCARE", "SCOPE", "SEIZE", "SHACK", "SHAFT", "SIXTY",
     "TABLE", "TOWER", "THANK", "TINGE", "TOUGH", "TRACK", "TRULY", "TWICE", "TYPES", "TAXES",
+    "TAUNT", "TEETH", "TENOR", "THEIF", "THICK", "TIPSY", "TORSO", "TOWER", "TRIAL", "TURBO",
     "VALUE", "VAULT", "VIGOR", "VOCAL", "VOICE", "VOWEL", "VIXEN", "VINYL", "VIDEO", "VENOM",
     "WAIST", "WEDGE", "WHITE", "WHISK", "WOMEN", "WORLD", "WRONG", "WRECK", "WIMPY", "WIDTH",
-    "YAWNS", "YOUNG", "YACHT", "YEARN", "ZEBRA", "ZESTY", "EXACT", "AVERT", "CHEAT", "REACT",
+    "YAWNS", "YOUNG", "YACHT", "YEARN", "ZEBRA", "ZESTY", "EXACT", "ANGRY", "CHEAT", "REACT",
 ]
 
 
@@ -35,32 +50,49 @@ var letterRow = 1;
 var letterCol = 0;
 function keyboard(letter) {
 
+    var letterString = `btn${letter}`;
+    var letterButton = document.getElementById(letterString);
+    
+
     if (letter === 'xxx') {
         if(letterCol != 0)
         {
             letterCol--;
+
+            letterButton.animate({
+                transform: 'translateX(-.5em) scaleX(1.1)',
+            }, {
+                //easing: "ease-out", 
+                duration: 100,      
+                iterationCount: 1,
+            });
+
             let rowID = `r${letterRow}c${letterCol}`;
             var square = document.getElementById(rowID);
             square.innerHTML = "";
             document.getElementById("guessBtn").disabled = true;
 
             square.animate({
-                borderBottomColor: ["white", "rgb(163, 163, 163)"],
-                borderTopColor: ["white", "rgb(163, 163, 163)"],
-                borderLeftColor: ["white", "rgb(163, 163, 163)"],
-                borderRightColor: ["white", "rgb(163, 163, 163)"],
-                backgroundColor: ["rgba(78,0,0,0.3)", "rgba(163, 163, 163, 0)"],
-                transform: 'scale(0.98)'
+                transform: 'scale(0.96)',
             }, {
                 delay: 0,          
                 easing: "ease-in-out", 
-                duration: 500,        
+                duration: 100,        
                 iterationCount: 1,     
             });
         } 
     }
     else {
         if (letterCol < 5) {
+
+            letterButton.animate({
+                transform: 'translateY(-1em) scaleY(1.1) scaleX(1.1)',
+            }, {
+                //easing: "ease-out", 
+                duration: 100,      
+                iterationCount: 1,
+            });
+
             let rowID = `r${letterRow}c${letterCol}`;
             var square = document.getElementById(rowID);
             square.innerHTML = letter;
@@ -74,7 +106,7 @@ function keyboard(letter) {
             }, {
                 delay: 0,            
                 easing: "ease-in-out", 
-                duration: 500,      
+                duration: 400,      
                 iterationCount: 1,    
             });
 
@@ -106,7 +138,7 @@ var guesses = 1;
 var word = words[arrayIndex];
 var wordCheck = word;
 function submitGuess() {
-    
+
     var correctCount = 0;
 
     // =========================================================
@@ -168,24 +200,6 @@ function submitGuess() {
                 }
             }
 
-            
-            // else if (wordCheck[col] === "_" && word[col] != letterSq && wordCheck.includes(letterSq) == true) {
-            //     document.getElementById(keyboardBtnID).style.animation = "rightLetterKeyboard 1s forwards";
-            //     document.getElementById(rowID).style.animation = "rightLetter 1s forwards";
-            //     correctCount = 0;
-            // }
-
-            // 
-            // else if (wordCheck[col] === "_" && word.includes(letterSq) == false) {
-            //     document.getElementById(rowID).style.animation = "wrongLetter 1s forwards";
-            //     document.getElementById(keyboardBtnID).style.animation = "wrongLetterKeyboard 1s forwards";
-            //     document.getElementById(keyboardBtnID).onclick = null;
-            //     correctCount = 0;
-            // }
-
-
-            
-
             // Make square yellow if wordCheck contains the letter.
             // This allows for words with more than one of the same letter.
             else if (wordCheck.includes(letterSq)) {
@@ -235,3 +249,43 @@ function submitGuess() {
 }
 
 
+let directionCounter = 0;
+function showDirections(clickCounter) {
+    directionCounter += clickCounter;
+    let directions = document.getElementById("directions");
+    if (directionCounter % 2 != 0) {
+        directions.style.display = "block";
+
+        directions.animate({
+            opacity: 1,
+        }, {
+            easing: "ease-in", 
+            duration: 200,      
+            iterationCount: 1,
+            fill: "forwards",
+        });
+    }
+    else {
+        directions.animate({
+            opacity: 0,
+        }, {
+            easing: "ease-in", 
+            duration: 200,      
+            iterationCount: 1,
+            fill: "forwards",
+        });
+        $(document).ready(function()
+            {
+                setTimeout(function()
+                {
+                    hideDirections(); 
+                }, 
+                200);
+            }); 
+    }
+}
+
+function hideDirections() {
+    document.getElementById("directions").style.display = "none";
+    directionCounter = 0;
+}
