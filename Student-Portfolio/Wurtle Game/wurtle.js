@@ -134,11 +134,10 @@ function nextLine() {
 
 
 var guesses = 1;
-//var word = "DEEDS";
 var word = words[arrayIndex];
 var wordCheck = word;
 function submitGuess() {
-
+    var delayCounter = 0;
     var correctCount = 0;
 
     // =========================================================
@@ -182,9 +181,31 @@ function submitGuess() {
 
             // Turn square green if the letters match in the square and word
             if (word[col] === letterSq) {
-                document.getElementById(keyboardBtnID).style.animation = "rightSpotKeyboard 1s forwards";
-                document.getElementById(rowID).style.animation = "rightSpot 1s forwards";
+                //document.getElementById(keyboardBtnID).style.animation = "rightSpotKeyboard 1s forwards";
                 correctCount++;
+                
+                var square = document.getElementById(rowID);
+                square.animate({
+                    backgroundColor: ["rgba(255, 255, 255, 0)", "green"]
+                }, {
+                    delay: delayCounter,            
+                    easing: "ease-in-out", 
+                    duration: 1000,      
+                    iterationCount: 1,    
+                    fill: "forwards",
+                });
+                var keyboardButton = document.getElementById(keyboardBtnID);
+                var bg = keyboardButton.style.backgroundColor;
+                keyboardButton.animate({
+                    backgroundColor: [bg, "green"]
+                }, {
+                    delay: delayCounter,            
+                    easing: "ease-in-out", 
+                    duration: 1000,      
+                    iterationCount: 1,    
+                    fill: "forwards",
+                });
+
 
                 if (correctCount == 5) {
                     $(document).ready(function()
@@ -195,7 +216,7 @@ function submitGuess() {
                             document.getElementById("gameOver").style.display = "block";
                             document.getElementById("keyboard").style.display = "none";
                         }, 
-                        1000);
+                        2000);
                     });   
                 }
             }
@@ -204,9 +225,29 @@ function submitGuess() {
             // This allows for words with more than one of the same letter.
             else if (wordCheck.includes(letterSq)) {
                 correctCount = 0;
-                document.getElementById(keyboardBtnID).style.animation = "rightLetterKeyboard 1s forwards";
-                document.getElementById(rowID).style.animation = "rightLetter 1s forwards";
+                //document.getElementById(keyboardBtnID).style.animation = "rightLetterKeyboard 1s forwards";
                 wordCheck = wordCheck.replace(letterSq, "_");
+                var square = document.getElementById(rowID);
+                square.animate({
+                    backgroundColor: ["rgba(255, 255, 255, 0)", "rgb(156, 141, 0)"]
+                }, {
+                    delay: delayCounter,            
+                    easing: "ease-in-out", 
+                    duration: 1000,      
+                    iterationCount: 1,    
+                    fill: "forwards",
+                });
+                var keyboardButton = document.getElementById(keyboardBtnID);
+                var bg = keyboardButton.style.backgroundColor;
+                keyboardButton.animate({
+                    backgroundColor: [bg, "rgb(156, 141, 0)"]
+                }, {
+                    delay: delayCounter,            
+                    easing: "ease-in-out", 
+                    duration: 1000,      
+                    iterationCount: 1,    
+                    fill: "forwards",
+                });
             }
 
             // If the word does not contain the letter, then:
@@ -214,9 +255,31 @@ function submitGuess() {
             // If the word DOES contain the letter, the next 'else if' is run.
             else if (word.includes(letterSq) == false) {
                 correctCount = 0;
-                document.getElementById(rowID).style.animation = "wrongLetter 1s forwards";
-                document.getElementById(keyboardBtnID).style.animation = "wrongLetterKeyboard 1s forwards";
-                document.getElementById(keyboardBtnID).onclick = null;
+                //document.getElementById(rowID).style.animation = "wrongLetter 1s forwards";
+                //document.getElementById(keyboardBtnID).style.animation = "wrongLetterKeyboard 1s forwards";
+                //document.getElementById(keyboardBtnID).onclick = null;
+                var square = document.getElementById(rowID);
+                square.animate({
+                    backgroundColor: ["rgba(255, 255, 255, 0)", "rgb(129, 129, 129)"]
+                }, {
+                    delay: delayCounter,            
+                    easing: "ease-in-out", 
+                    duration: 1000,      
+                    iterationCount: 1, 
+                    fill: "forwards",   
+                });
+                var keyboardButton = document.getElementById(keyboardBtnID);
+                var letterColor = keyboardButton.style.color;
+                keyboardButton.animate({
+                    color: [letterColor, "rgb(163, 163, 163)"]
+                }, {
+                    delay: delayCounter,            
+                    easing: "ease-in-out", 
+                    duration: 1000,      
+                    iterationCount: 1,    
+                    fill: "forwards",
+                });
+                keyboardButton.onclick = null;
             }
 
             // If the word DOES contain the letter (and previous 'else if' is bypassed) BUT the wordCheck does NOT,
@@ -225,8 +288,19 @@ function submitGuess() {
             // This accounts for the user entering multiples of the same letter.
             else if (wordCheck.includes(letterSq) == false) {
                 correctCount = 0;
-                document.getElementById(rowID).style.animation = "wrongLetter 1s forwards";
+                //document.getElementById(rowID).style.animation = "wrongLetter 1s forwards";
+                var square = document.getElementById(rowID);
+                square.animate({
+                    backgroundColor: ["rgba(255, 255, 255, 0)", "rgb(129, 129, 129)"]
+                }, {
+                    delay: delayCounter,            
+                    easing: "ease-in-out", 
+                    duration: 1000,      
+                    iterationCount: 1,    
+                    fill: "forwards",
+                });
             }  
+            delayCounter += 300;
         }
 
         wordCheck = word;

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Colorful ABC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+
+<div class="NavBar">
+    <a href="#A">A</a>
+    <a href="#B">B</a>
+    <a href="#C">C</a>
+    <a href="#D">D</a>
+    <a href="#E">E</a>
+    <a href="#F">F</a>
+    <a href="#G">G</a>
+    <a href="#H">H</a>
+    <a href="#I">I</a>
+    <a href="#J">J</a>
+    <a href="#K">K</a>
+    <a href="#L">L</a>
+    <a href="#M">M</a>
+    <a href="#N">N</a>
+    <a href="#O">O</a>
+    <a href="#P">P</a>
+    <a href="#Q">Q</a>
+    <a href="#R">R</a>
+    <a href="#S">S</a>
+    <a href="#T">T</a>
+    <a href="#U">U</a>
+    <a href="#V">V</a>
+    <a href="#W">W</a>
+    <a href="#X">X</a>
+    <a href="#Y">Y</a>
+    <a href="#Z">Z</a>
+</div>
+
+<div class="banner" id="banner">
+    <h1>Welcome to The Colorful ABCs</h1>
+    <h3>Click on the blocks of color to reveal the color name!</h3>
+    <button id="gotIt">Ready?</button>
+</div>
+
+<div class="mainDiv" id="mainDiv">
+    <div id="A"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">A</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" id="color-0" onclick="showColor(0)" onmouseleave="hideColor(0)" style="background-color:#EFDECD;">
+                <p class="colorText">almond</p>
+                <h3 class="text-hidden" id="th-0"></h3>
+            </div>
+            <div class="swatch" id="color-1" onclick="showColor(1)" onmouseleave="hideColor(1)" style="background-color:#FFBF00;">
+                <p class="colorText">amber</p>
+                <h3 class="text-hidden" id="th-1"></h3>
+            </div>
+            <div class="swatch" id="color-2" onclick="showColor(2)" onmouseleave="hideColor(2)" style="background-color:#00FFFF;">
+                <p class="colorText">aqua</p>
+                <h3 class="text-hidden" id="th-2"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="B"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">B</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" id="color-3" onclick="showColor(3)" onmouseleave="hideColor(3)" style="background-color: black;">
+                <p class="colorText whiteText">black</p>
+                <h3 class="text-hidden" id="th-3" style="color:white;"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(4)" onmouseleave="hideColor(4)" style="background-color: #88540B;">
+                <p class="colorText whiteText">brown</p>
+                <h3 class="text-hidden" id="th-4" style="color:white;"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(5)" onmouseleave="hideColor(5)" style="background-color:#0000FF;">
+                <p class="colorText whiteText">blue</p>
+                <h3 class="text-hidden" id="th-5" style="color:white;"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="C"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">C</h1></div>            
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(6)" onmouseleave="hideColor(6)" style="background-color:#B87333;">
+                <p class="colorText">copper</p>
+                <h3 class="text-hidden" id="th-6"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(7)" onmouseleave="hideColor(7)" style="background-color: #FFFF99;">
+                <p class="colorText">canary</p>
+                <h3 class="text-hidden" id="th-7"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(8)" onmouseleave="hideColor(8)" style="background-color: #FF7F50;">
+                <p class="colorText">coral</p>
+                <h3 class="text-hidden" id="th-8"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="D"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">D</h1></div>            
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(9)" onmouseleave="hideColor(9)" style="background-color: #1560BD;">
+                <p class="colorText">denim</p>
+                <h3 class="text-hidden" id="th-9"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(10)" onmouseleave="hideColor(10)" style="background-color:#C19A6B;">
+                <p class="colorText">desert</p>
+                <h3 class="text-hidden" id="th-10"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(11)" onmouseleave="hideColor(11)" style="background-color: #967117;">
+                <p class="colorText">drab</p>
+                <h3 class="text-hidden" id="th-11"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="E"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">E</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(12)" onmouseleave="hideColor(12)" style="background-color: #555D50;">
+                <p class="colorText">ebony</p>
+                <h3 class="text-hidden" id="th-12"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(13)" onmouseleave="hideColor(13)" style="background-color: #50C878;">
+                <p class="colorText">emerald</p>
+                <h3 class="text-hidden" id="th-13"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(14)" onmouseleave="hideColor(14)" style="background-color:#614051;">
+                <p class="colorText">eggplant</p>
+                <h3 class="text-hidden" id="th-14"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="F"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">F</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(15)" onmouseleave="hideColor(15)" style="background-color: #E5AA70;">
+                <p class="colorText">fawn</p>
+                <h3 class="text-hidden" id="th-15"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(16)" onmouseleave="hideColor(16)" style="background-color: #C154C1;">
+                <p class="colorText">fuchsia</p>
+                <h3 class="text-hidden" id="th-16"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(17)" onmouseleave="hideColor(17)" style="background-color:#014421;">
+                <p class="colorText">forest</p>
+                <h3 class="text-hidden" id="th-17"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="G"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">G</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(18)" onmouseleave="hideColor(18)" style="background-color: #D4AF37;">
+                <p class="colorText">gold</p>
+                <h3 class="text-hidden" id="th-18"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(19)" onmouseleave="hideColor(19)" style="background-color:#BEBEBE;">
+                <p class="colorText">gray</p>
+                <h3 class="text-hidden" id="th-19"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(20)" onmouseleave="hideColor(20)" style="background-color: #008000;">
+                <p class="colorText">green</p>
+                <h3 class="text-hidden" id="th-20"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="H"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">H</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(21)" onmouseleave="hideColor(21)" style="background-color: #FF69B4;">
+                <p class="colorText">hot pink</p>
+                <h3 class="text-hidden" id="th-21"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(22)" onmouseleave="hideColor(22)" style="background-color:#F0FFF0;">
+                <p class="colorText">honeydew</p>
+                <h3 class="text-hidden" id="th-22"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(23)" onmouseleave="hideColor(23)" style="background-color: #355E3B;">
+                <p class="colorText">hunter green</p>
+                <h3 class="text-hidden" id="th-23"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="I"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">I</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(24)" onmouseleave="hideColor(24)" style="background-color: #4B0082;">
+                <p class="colorText">indigo</p>
+                <h3 class="text-hidden" id="th-24"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(25)" onmouseleave="hideColor(25)" style="background-color:#FFFFF0;">
+                <p class="colorText">ivory</p>
+                <h3 class="text-hidden" id="th-25"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(26)" onmouseleave="hideColor(26)" style="background-color: #5A4FCF;">
+                <p class="colorText">iris</p>
+                <h3 class="text-hidden" id="th-26"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="J"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">J</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(27)" onmouseleave="hideColor(27)" style="background-color: #00A86B;">
+                <p class="colorText">jade</p>
+                <h3 class="text-hidden" id="th-27"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(28)" onmouseleave="hideColor(28)" style="background-color:#343434;">
+                <p class="colorText">jet</p>
+                <h3 class="text-hidden" id="th-28" style="color:white;"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(29)" onmouseleave="hideColor(29)" style="background-color: #F4CA16;">
+                <p class="colorText">jonquil</p>
+                <h3 class="text-hidden" id="th-29"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="K"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">K</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(30)" onmouseleave="hideColor(30)" style="background-color: #4CBB17;">
+                <p class="colorText">kelly</p>
+                <h3 class="text-hidden" id="th-30"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(31)" onmouseleave="hideColor(31)" style="background-color:#C3B091;">
+                <p class="colorText">khaki</p>
+                <h3 class="text-hidden" id="th-31"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(32)" onmouseleave="hideColor(32)" style="background-color: #882D17;">
+                <p class="colorText">kobe</p>
+                <h3 class="text-hidden" id="th-32"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="L"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">L</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(33)" onmouseleave="hideColor(33)" style="background-color: #32CD32;">
+                <p class="colorText">lime green</p>
+                <h3 class="text-hidden" id="th-33"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(34)" onmouseleave="hideColor(34)" style="background-color: #B57EDC;">
+                <p class="colorText">lavender</p>
+                <h3 class="text-hidden" id="th-34"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(35)" onmouseleave="hideColor(35)" style="background-color:#CF1020;">
+                <p class="colorText">lava</p>
+                <h3 class="text-hidden" id="th-35"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="M"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">M</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(36)" onmouseleave="hideColor(36)" style="background-color: #FF00FF;">
+                <p class="colorText">magenta</p>
+                <h3 class="text-hidden" id="th-36"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(37)" onmouseleave="hideColor(37)" style="background-color: #FFDB58;">
+                <p class="colorText">mustard</p>
+                <h3 class="text-hidden" id="th-37"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(38)" onmouseleave="hideColor(38)" style="background-color:#800000;">
+                <p class="colorText">maroon</p>
+                <h3 class="text-hidden" id="th-38"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="N"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">N</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(39)" onmouseleave="hideColor(39)" style="background-color: #000080;">
+                <p class="colorText">navy</p>
+                <h3 class="text-hidden" id="th-39" style="color:white;"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(40)" onmouseleave="hideColor(40)" style="background-color:#39FF14;">
+                <p class="colorText">neon green</p>
+                <h3 class="text-hidden" id="th-40"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(41)" onmouseleave="hideColor(41)" style="background-color: #727472;">
+                <p class="colorText">nickel</p>
+                <h3 class="text-hidden" id="th-41"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="O"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">O</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(42)" onmouseleave="hideColor(42)" style="background-color: #808000;">
+                <p class="colorText">olive</p>
+                <h3 class="text-hidden" id="th-42"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(43)" onmouseleave="hideColor(43)" style="background-color:#353839;">
+                <p class="colorText">onyx</p>
+                <h3 class="text-hidden" id="th-43" style="color:white;"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(44)" onmouseleave="hideColor(44)" style="background-color: #FF5800;">
+                <p class="colorText">orange</p>
+                <h3 class="text-hidden" id="th-44"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="P"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">P</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(45)" onmouseleave="hideColor(45)" style="background-color: #CCCCFF;">
+                <p class="colorText">periwinkle</p>
+                <h3 class="text-hidden" id="th-45"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(46)" onmouseleave="hideColor(46)" style="background-color:#D74894;">
+                <p class="colorText">pink</p>
+                <h3 class="text-hidden" id="th-46"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(47)" onmouseleave="hideColor(47)" style="background-color: #6A0DAD;">
+                <p class="colorText">purple</p>
+                <h3 class="text-hidden" id="th-47"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="Q"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">Q</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(48)" onmouseleave="hideColor(48)" style="background-color: #51414F;">
+                <p class="colorText">quartz</p>
+                <h3 class="text-hidden" id="th-48"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(49)" onmouseleave="hideColor(49)" style="background-color:#A6A6A6;">
+                <p class="colorText">quicksilver</p>
+                <h3 class="text-hidden" id="th-49"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(50)" onmouseleave="hideColor(50)" style="background-color: #436B95;">
+                <p class="colorText">queen blue</p>
+                <h3 class="text-hidden" id="th-50"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="R"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">R</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(51)" onmouseleave="hideColor(51)" style="background-color: #ED2939;">
+                <p class="colorText">red</p>
+                <h3 class="text-hidden" id="th-51" style="color:white;"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(52)" onmouseleave="hideColor(52)" style="background-color:#003597;">
+                <p class="colorText">royal blue</p>
+                <h3 class="text-hidden" id="th-52" style="color:white;"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(53)" onmouseleave="hideColor(53)" style="background-color: #00CCCC;">
+                <p class="colorText">robin egg</p>
+                <h3 class="text-hidden" id="th-53" style="color:white;"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="S"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">S</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(54)" onmouseleave="hideColor(54)" style="background-color: #BCB88A;">
+                <p class="colorText">sage</p>
+                <h3 class="text-hidden" id="th-54"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(55)" onmouseleave="hideColor(55)" style="background-color:#0F52BA;">
+                <p class="colorText">sapphire</p>
+                <h3 class="text-hidden" id="th-55"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(56)" onmouseleave="hideColor(56)" style="background-color: #C0C0C0;">
+                <p class="colorText">silver</p>
+                <h3 class="text-hidden" id="th-56"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="T"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">T</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(57)" onmouseleave="hideColor(57)" style="background-color: #D2B48C;">
+                <p class="colorText">tan</p>
+                <h3 class="text-hidden" id="th-57"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(58)" onmouseleave="hideColor(58)" style="background-color:#008080;">
+                <p class="colorText">teal</p>
+                <h3 class="text-hidden" id="th-58"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(59)" onmouseleave="hideColor(59)" style="background-color: #483C32;">
+                <p class="colorText">taupe</p>
+                <h3 class="text-hidden" id="th-59"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="U"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">U</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(60)" onmouseleave="hideColor(60)" style="background-color: #8878c3;">
+                <p class="colorText">ube</p>
+                <h3 class="text-hidden" id="th-60"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(61)" onmouseleave="hideColor(61)" style="background-color: #3f00ff;">
+                <p class="colorText">ultramarine</p>
+                <h3 class="text-hidden" id="th-61"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(62)" onmouseleave="hideColor(62)" style="background-color:#635147;">
+                <p class="colorText">umber</p>
+                <h3 class="text-hidden" id="th-62"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="V"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">V</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(63)" onmouseleave="hideColor(63)" style="background-color: #E34234;">
+                <p class="colorText">vermilion</p>
+                <h3 class="text-hidden" id="th-63"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(64)" onmouseleave="hideColor(64)" style="background-color: #8F00FF;">
+                <p class="colorText">violet</p>
+                <h3 class="text-hidden" id="th-64"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(65)" onmouseleave="hideColor(65)" style="background-color:#40826D;">
+                <p class="colorText">viridian</p>
+                <h3 class="text-hidden" id="th-65"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="W"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">W</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(66)" onmouseleave="hideColor(66)" style="background-color:#F5DEB3;">
+                <p class="colorText">wheat</p>
+                <h3 class="text-hidden" id="th-66"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(67)" onmouseleave="hideColor(67)" style="background-color: #FFFFFF;">
+                <p class="colorText">white</p>
+                <h3 class="text-hidden" id="th-67"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(68)" onmouseleave="hideColor(68)" style="background-color: #722F37;">
+                <p class="colorText">wine</p>
+                <h3 class="text-hidden" id="th-68"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="X"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">X</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(69)" onmouseleave="hideColor(69)" style="background-color:#738678;">
+                <p class="colorText">xanadu</p>
+                <h3 class="text-hidden" id="th-69"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(70)" onmouseleave="hideColor(70)" style="background-color: #EEED09;">
+                <p class="colorText">xanthic</p>
+                <h3 class="text-hidden" id="th-70"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(71)" onmouseleave="hideColor(71)" style="background-color: #F1B42F;">
+                <p class="colorText">xanthous</p>
+                <h3 class="text-hidden" id="th-71"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="Y"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">Y</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(72)" onmouseleave="hideColor(72)" style="background-color:#FFFF00;">
+                <p class="colorText">yellow</p>
+                <h3 class="text-hidden" id="th-72"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(73)" onmouseleave="hideColor(73)" style="background-color: #9ACD32;">
+                <p class="colorText">yellow-green</p>
+                <h3 class="text-hidden" id="th-73"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(74)" onmouseleave="hideColor(74)" style="background-color: #FFAE42;">
+                <p class="colorText">yellow-orange</p>
+                <h3 class="text-hidden" id="th-74"></h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="Z"></div><br>
+    <div class="row">
+        <div class="column col-1">
+            <div class="letter-container"><h1 class="letter">Z</h1></div>
+            <p class="text">is for</p>
+        </div>
+        <div class="column col-2">
+            <div class="swatch" onclick="showColor(75)" onmouseleave="hideColor(75)" style="background-color: #39A78E;">
+                <p class="colorText">zomp</p>
+                <h3 class="text-hidden" id="th-75" style="color:white;"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(76)" onmouseleave="hideColor(76)" style="background-color: #92898a;">
+                <p class="colorText">zinc</p>
+                <h3 class="text-hidden" id="th-76" style="color:white;"></h3>
+            </div>
+            <div class="swatch" onclick="showColor(77)" onmouseleave="hideColor(77)" style="background-color:#0014A8;">
+                <p class="colorText">zaffre</p>
+                <h3 class="text-hidden" id="th-77" style="color:white;"></h3>
+            </div>
+        </div>
+    </div>
+    
+    <br><br><br>
+
+
+</div>
+</body>
+</html>
